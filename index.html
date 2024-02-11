@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Site layout «Interia»</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="rootpage">
+			<div class="rootpage__project">
+				<h1>Site layout «Interia»</h1>
+				<div class="rootpage__info">
+					Description of the project
+				</div>
+				<h2>Ready pages:</h2>
+				<ol class="rootpage__list">
+					<li><a target="_blank" href="home.html">Main</a></li>
+				</ol>
+				<h2>Pop-up:</h2>
+				<ol class="rootpage__list">
+					<li><a target="_blank" href="home.html#"></a></li>
+				</ol>
+			</div>
+			<div class="rootpage__tnx">
+				<h2>Thank you for the order!</h2>
+				<p>I would appreciate a good review.</p>
+				<p>Contact again!</p>
+			</div>
+			<div class="rootpage__contacts">
+				<h2>My contacts:</h2>
+				<p>Mail: <a href="mailto:slobodinuk.odeskabel@gmail.com">slobodinuk.odeskabel@gmail.com</a></p>
+				<p>Phone: <a href="tel:+380503339941">+38 050-333-99-41</a></p>
+				<p>Social: <a href="https://www.instagram.com/yevgeniyslobodianuk/" target="_blank">Instagram</a></p>
+			</div>
+		</div>
+		<!--Waves Container-->
+		<div class="decor">
+			<svg class="decor__waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+				<defs>
+					<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+				</defs>
+				<g class="decor__parallax">
+					<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+					<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+					<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+					<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+				</g>
+			</svg>
+		</div>
+		<!--Waves end-->
+	</div>
+</body>
+<style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #fff;
+		/* background: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a); */
+		background: linear-gradient(to right, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+	}
+
+	body {
+		font-family: Montserrat;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: #fff;
+	}
+
+	a:visited {
+		text-decoration: underline;
+		color: rgb(214, 212, 212);
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	ul li {
+		list-style: none;
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 1 1 auto;
+	}
+
+	@media (min-width: 1329px) {
+		.rootpage {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		/* color: #ebe691; */
+		font-size: 2.5rem;
+		margin: 0px 0px 1.25rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 1.85rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+	}
+
+	h2 {
+		/* color: #ebe691; */
+		font-size: 1.25rem;
+		margin: 0px 0px 1rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__info {
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__contacts,
+	.rootpage__tnx {
+		border-radius: 200px;
+		padding: 20px 65px;
+		line-height: 140%;
+	}
+
+	@media (max-width: 767px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 40px;
+			padding: 20px;
+		}
+	}
+
+	@media (max-width: 348px) {
+		.rootpage__contacts {
+			margin-left: -14px;
+		}
+	}
+
+	.rootpage__contacts {
+		background: #32b5a4;
+
+	}
+
+	.rootpage__contacts a {
+		color: #a9ff00;
+	}
+
+	.rootpage__tnx {
+		/* background: #c22d63; */
+		background: #2dc284;
+	}
+
+	@media (max-width: 1329px) {
+		.rootpage__tnx {
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.decor__waves {
+		/* position:relative; */
+		width: 100%;
+		height: 20vh;
+		margin-bottom: -7px;
+		/*Fix for safari gap*/
+		min-height: 100px;
+		max-height: 150px;
+		/* Animation */
+	}
+
+	.decor__parallax>use {
+		animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+	}
+
+	.decor__parallax>use:nth-child(1) {
+		animation-delay: -2s;
+		animation-duration: 7s;
+	}
+
+	.decor__parallax>use:nth-child(2) {
+		animation-delay: -3s;
+		animation-duration: 10s;
+	}
+
+	.decor__parallax>use:nth-child(3) {
+		animation-delay: -4s;
+		animation-duration: 13s;
+	}
+
+	.decor__parallax>use:nth-child(4) {
+		animation-delay: -5s;
+		animation-duration: 20s;
+	}
+
+	@keyframes move-forever {
+		0% {
+			transform: translate3d(-90px, 0, 0);
+		}
+
+		100% {
+			transform: translate3d(85px, 0, 0);
+		}
+	}
+
+	/*Shrinking for mobile*/
+	@media (max-width: 768px) {
+		.decor__waves {
+			height: 40px;
+			min-height: 40px;
+		}
+
+		.content {
+			height: 30vh;
+		}
+
+		h1 {
+			font-size: 24px;
+		}
+	}
+</style>
+
+</html>
